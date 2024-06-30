@@ -1,0 +1,40 @@
+﻿@model AracKiralamaDB.Models.ModelToplama
+@{
+    ViewBag.Title = "Araclar";
+    Layout = "~/Views/Shared/genel_layout.cshtml";
+    <link href="~/Content/css/araclar.css" rel="stylesheet" />
+}
+
+<h1>Araçlarımız</h1>
+<table >
+    <thead>
+        <tr>
+            <th>Görünüm</th>
+            <th>Marka</th>
+            <th>Model</th>
+            <th>Model Yılı</th>
+            <th>Yakıt Türü</th>
+            <th>Vites Tipi</th>
+            <th>Kiralama Ücreti</th>
+
+        </tr>
+    </thead>
+    @foreach (var arac in Model.Arabalars)
+    {
+        
+        <tr >
+            <td style="width:30px; hei"> <img src="@arac.ArabaResimleri.Resim" alt="Alternate Text" /></td>
+            <td>@arac.ArabaMarkalari.ArabaMarkaAdi</td>
+            <td>@arac.ArabaModelleri.ArabaModelAdi</td>
+            <td>@arac.Yıl</td>
+            <td>@arac.YakitTuru</td>
+            <td >@arac.ArabaVitesTurleri.ArabaVitesTurAdi</td>
+            <td >@arac.Fiyat</td>
+
+        </tr>
+    }
+
+</table>
+<div>
+
+</div>

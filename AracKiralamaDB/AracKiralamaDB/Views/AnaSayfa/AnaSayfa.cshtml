@@ -1,0 +1,139 @@
+﻿@model AracKiralamaDB.Models.ModelToplama
+@{
+    ViewBag.Title = "AnaSayfa";
+    Layout = "~/Views/Shared/genel_layout.cshtml";
+    <link href="~/Content/css/anasayfa.css" rel="stylesheet" />
+    
+}
+<div class="alan1">
+    <div class="alan1yazi">
+        <h1>CVS <br />RENT A CAR</h1>
+
+        <p><br />
+            CVS rent a car internet sayfasına hoş geldiniz.
+
+        </p>
+
+    </div>
+    <div class="btn"><a href="@Url.Action("Index","Araclar")">Araçlar</a></div>
+</div>
+<div class="alan2">
+    <div class="alan2baslik"><div class="baslik_ortala"><h1>Araba İlanları</h1></div></div>
+    <div class="alan2ortala">
+        <div class="alan2ilan1">
+            @foreach (var araba in Model.Arabalars)
+            {
+                if (araba.ArabaMarkaID == 1)
+                {
+                    <img style="width:100%;height:40%;margin-top:10%;" src="@araba.ArabaResimleri.Resim" alt="Alternate Text" />
+                    <p><span class="kalinlastir">Marka:</span>@araba.ArabaMarkalari.ArabaMarkaAdi</p>
+                    <p><span class="kalinlastir">Model:</span>@araba.ArabaModelleri.ArabaModelAdi</p>
+                    <p><span class="kalinlastir">Model Yılı:</span>@araba.Yıl</p>
+                    <p><span class="kalinlastir">Yakıt Türü:</span>@araba.YakitTuru</p>
+                    <p><span class="kalinlastir">Vites Tipi:</span>@araba.ArabaVitesTurleri.ArabaVitesTurAdi</p>
+                    <p><span class="kalinlastir">Kiralama Ücreti:</span>@araba.Fiyat</p>
+                   <div class="btn"><a href="@Url.Action("Index","Araclar")">Araca Git</a></div>
+                }
+            }
+        </div>
+        <div class="alan2ilan2">
+            @foreach (var araba in Model.Arabalars)
+            {
+                if (araba.ArabaMarkaID==3)
+                {
+                    <img style="width:100%;height:40%;margin-top:10%;" src="@araba.ArabaResimleri.Resim" alt="Alternate Text" />
+                    <p><span class="kalinlastir">Marka:</span>@araba.ArabaMarkalari.ArabaMarkaAdi</p>
+                    <p><span class="kalinlastir">Model:</span>@araba.ArabaModelleri.ArabaModelAdi</p>
+                    <p><span class="kalinlastir">Model Yılı:</span>@araba.Yıl</p>
+                    <p><span class="kalinlastir">Yakıt Türü:</span>@araba.YakitTuru</p>
+                    <p><span class="kalinlastir">Vites Tipi:</span>@araba.ArabaVitesTurleri.ArabaVitesTurAdi</p>
+                    <p><span class="kalinlastir">Kiralama Ücreti:</span>@araba.Fiyat</p>
+                    <div class="btn"><a href="@Url.Action("Index","Araclar")">Araca Git</a></div>
+                }
+            }
+        </div>
+        <div class="alan2ilan3">
+            @foreach (var araba in Model.Arabalars)
+            {
+                if (araba.ArabaMarkaID == 5)
+                {
+                    <img style="width:100%;height:40%;margin-top:10%;" src="@araba.ArabaResimleri.Resim" alt="Alternate Text" />
+                    <p><span class="kalinlastir">Marka:</span>@araba.ArabaMarkalari.ArabaMarkaAdi</p>
+                    <p><span class="kalinlastir">Model:</span>@araba.ArabaModelleri.ArabaModelAdi</p>
+                    <p><span class="kalinlastir">Model Yılı:</span>@araba.Yıl</p>
+                    <p><span class="kalinlastir">Yakıt Türü:</span>@araba.YakitTuru</p>
+                    <p><span class="kalinlastir">Vites Tipi:</span>@araba.ArabaVitesTurleri.ArabaVitesTurAdi</p>
+                    <p><span class="kalinlastir">Kiralama Ücreti:</span>@araba.Fiyat</p>
+                    <div class="btn"><a href="@Url.Action("Index","Araclar")">Araca Git</a></div>
+                }
+            }
+            </div>
+    </div>
+</div>
+<div class="alan3">
+    <div class="alan3baslik"><div class="baslik_ortala"><h1>Hakkımızda</h1></div></div>
+    <div class="alan3ortala">
+        <div class="alan3sol">
+            <img src="~/Content/img/hak.jpg" />
+        </div>
+        <div class="alan3sag"><h1>Hakkımızda</h1> 
+                              <div class="alan3sagyazi">
+                                  <p>
+                                      CVS Rent A Car firması olarak müşterilerimizin memnuniyetini sağlamak için bu yola çıktık. CVS Rent A Car, araç kiralama hizmetini en uygun fiyata ve profesyonel adımlar ile güvenilir bir şekilde sunar.  İlk günden bugüne yaptığımız çalışmalar ile müşterilerimizin günün her saatinde kesintisiz bir şekilde sorunsuz, güvenli, uygun fiyatlı araç kiralama hizmetini almasını sağlıyoruz. Müşterilerimizin aldıkları hizmetten her adımında memnun olmaları en önemli hedefimiz bu sebeple; Güçlü teknolojik alt yapılarımız, iş takiplerimiz, profesyonel ve deneyimli çalışan kadromuz ile kiralanan araçların bakımlarını eksiksiz bir şekilde yaparak her daim müşterilerimizin konforunu ön planda tutuyoruz.
+                                      CVS Rent A Car araç kiralamada büyük değişimler yapmış olup, araç kiralama konforunu müşterilerimiz ile buluşturarak müşterilerimizin günlük araç kiralama taleplerini karşılıyoruz. CVS Rent A Car olarak; müşterilerimizin karlılığını önemseyerek, her koşulda memnuniyetlerine önem veriyoruz.
+
+                                  </p>
+                                  <div class="btn">
+                                      <a href="@Url.Action("Hakkımızda","Hakkımızda")">Hakkımızda</a>
+                                  </div>
+
+                              </div>
+        </div>
+    </div>
+    </div>
+<div class="alan4">
+    <div class="alan4baslik">
+        <div class="alan3baslik"><div class="baslik_ortala"><h1>İletişim</h1></div></div>
+    </div>
+    <div class="alan4sol">
+        <iframe class="map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12037.852231349814!2d28.985091699999998!3d41.03700175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab7650656bd63%3A0x8ca058b28c20b6c3!2zVGFrc2ltIE1leWRhbsSxLCBHw7xtw7zFn3N1eXUsIDM0NDM1IEJleW_En2x1L8Swc3RhbmJ1bA!5e0!3m2!1str!2str!4v1652655842555!5m2!1str!2str"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <div class="alan4sag">
+        <div class="alan4sagadres">
+            <div class="adresfoto">
+                <img src="~/Content/img/adres1-1.png" />
+            </div>
+            <div class="adresyazi">
+                <p>Gümüşsuyu, Intercontinental Otel, Asker Ocağı Cd. No:1, 34437 Beyoğlu/İstanbul</p>
+            </div>
+        </div>
+        <div class="alan4sagtelefon">
+            <div class="telefonfoto">
+                <img src="~/Content/img/telefon-2.png" />
+                <div class="telefonyazi">
+                    <p>0539 348 89 61</p>
+                    <p>0216 308 62 43</p>
+
+                </div>
+            </div>
+        </div>
+        <div class="alan4sagmail">
+            <div class="mailfoto">
+                <img src="~/Content/img/mail2.png" />
+            </div>
+            <div class="mailyazi">
+                <p><a href="https://login.microsoftonline.com/common/oauth2/authorize?client_id=00000002-0000-0ff1-ce00-000000000000&redirect_uri=https%3a%2f%2foutlook.office.com%2fowa%2f&resource=00000002-0000-0ff1-ce00-000000000000&response_mode=form_post&response_type=code+id_token&scope=openid&msafed=1&msaredir=1&client-request-id=5b53dd23-7307-411e-591a-c4bcf8ab84fd&protectedtoken=true&claims=%7b%22id_token%22%3a%7b%22xms_cc%22%3a%7b%22values%22%3a%5b%22CP1%22%5d%7d%7d%7d&nonce=638198399828454635.8c2b7647-8ad3-4462-b853-848bd1adde0c&state=Dcs7FoAgDAXRoMflRD4J8FgOEGtLt2-KO90EIjrd4ULyUG-CPCBjoECrNqk3dlm9aWdME1ZthReqMBTL8jR70g7-XvH9ZvwB&sso_reload=true">20yobi1050@isik.edu.tr</a></p>
+                <div style="margin-left:60%;"> <div class="btn">
+                    <a href="@Url.Action("iletisim","iletisim")">İletişim</a>
+</div></div>
+            </div>
+           
+
+        </div>
+    </div>
+</div>
+
+

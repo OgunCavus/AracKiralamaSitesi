@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="~/Content/css/adminpaneli.css" rel="stylesheet" />
+
+    <title>@ViewBag.Title - CVS RENT A CAR</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Araç Kiralama Yönetimi", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    @if (User.IsInRole("Admin"))
+                    {
+                        <li><a href="@Url.Action("Index", "Adminlers")">Adminler</a></li>
+                        <li><a href="@Url.Action("Index", "Musterilers")">Müşteriler</a></li>
+                        <li><a href="@Url.Action("Index", "Kullanicilars")">Kullanıcılar</a></li>
+                        <li><a href="@Url.Action("Index", "Arabalars")">Arabalar</a></li>
+                        <li><a href="@Url.Action("Index", "ArabaMarkalaris")">Markalar</a></li>
+                        <li><a href="@Url.Action("Index", "ArabaModelleris")">Modeller</a></li>
+                        <li><a href="@Url.Action("Index", "ArabaVitesTurleris")">Vitesler</a></li>
+                        <li><a href="@Url.Action("Index", "ArabaTurleris")">Türler</a></li>
+                        <li><a href="@Url.Action("Index", "ArabaResimleris")">Resimler</a></li>
+
+                    }
+                    @if (User.IsInRole("Musteri"))
+                    {
+                        <li><a href="/Kullanicilar/Logout">Çıkış</a></li>
+                        <li><a class="navbar-link px-lg-4" style="color:white">@User.Identity.Name</a></li>
+                    }
+                    <li><a href="/Kullanicilar/Logout">Çıkış</a></li>
+                    <li><a class="navbar-link px-lg-4" style="color:white">@User.Identity.Name</a></li>
+
+
+
+
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - CVS RENT A CAR</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

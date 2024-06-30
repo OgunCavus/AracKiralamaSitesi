@@ -1,0 +1,40 @@
+﻿@model IEnumerable<AracKiralamaDB.Models.ArabaModelleri>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Araba Modelleri</h2>
+
+<p>
+    <a class="btn btn-primary" href="@Url.Action("Create","ArabaModelleris")">Model Ekle</a>
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ArabaModelAdi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ArabaMarkalari.ArabaMarkaAdi)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ArabaModelAdi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ArabaMarkalari.ArabaMarkaAdi)
+        </td>
+        <td>
+            <a class="btn btn-success" href="@Url.Action("Edit","ArabaModelleris",new { id = item.ArabaModelID })">Güncelle</a>
+            <a class="btn btn-warning" href="@Url.Action("Details","ArabaModelleris",new { id = item.ArabaModelID })">Detay Gör</a>
+            <a class="btn btn-danger" href="@Url.Action("Delete","ArabaModelleris",new { id = item.ArabaModelID })">Sil</a>
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,35 @@
+﻿@model IEnumerable<AracKiralamaDB.Models.ArabaResimleri>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    <link href="~/Content/css/arabaresimleri.css" rel="stylesheet" />
+}
+
+<h2>Araba Resimleri</h2>
+
+<p>
+    <a class="btn btn-primary" href="@Url.Action("Create","ArabaResimleris")">Resim Ekle</a>
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Resim)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td class="arababoyut">
+            <img src="@item.Resim" alt="Alternate Text" />
+        </td>
+        <td>
+            <a class="btn btn-success" href="@Url.Action("Edit","ArabaResimleris",new { id = item.ArabaResimID })">Güncelle</a>
+            <a class="btn btn-warning" href="@Url.Action("Details","ArabaResimleris",new { id = item.ArabaResimID })">Detay Gör</a>
+            <a class="btn btn-danger" href="@Url.Action("Delete","ArabaResimleris",new { id = item.ArabaResimID })">Sil</a>
+        </td>
+    </tr>
+}
+
+</table>

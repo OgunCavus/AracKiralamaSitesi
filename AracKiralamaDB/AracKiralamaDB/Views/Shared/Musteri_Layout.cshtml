@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/css/genel.css" rel="stylesheet" />
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+          integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">
+
+            <img src="~/Content/img/sa.jpg" />
+        </a>
+        <nav class="navbar">
+            <a href="@Url.Action("MusteriAnaSayfa","AnaSayfa")" class="active">Anasayfa</a>
+            <a href="@Url.Action("MusteriIndex","Araclar")">Araçlar</a>
+            <a href="@Url.Action("MusteriIndex","Kiralamalars")">Kiralık Araçlar</a>
+            <a href="@Url.Action("MusteriHakkımızda","Hakkımızda")">Hakkımızda</a>
+            <a href="@Url.Action("Musteriiletisim","iletisim")">İletişim</a>
+
+        </nav>
+        <div class="login">
+            <a href="/Kullanicilar/Logout">Çıkış</a>
+
+        </div>
+    </header>
+    <div class="container">
+        @RenderBody()
+    </div>
+    <section class="footer">
+
+        <div class="share">
+            <a href="https://tr-tr.facebook.com/" class="fab fa-facebook"></a>
+            <a href="https://twitter.com/?lang=tr" class="fab fa-twitter"></a>
+            <a href="https://www.instagram.com/" class="fab fa-instagram"></a>
+            <a href="https://www.linkedin.com/" class="fab fa-linkedin"></a>
+            <a href="https://tr.pinterest.com/" class="fab fa-pinterest"></a>
+        </div>
+
+        <div class="links">
+            <a href="@Url.Action("MusteriAnaSayfa","AnaSayfa")">Anasayfa</a>
+            <a href="@Url.Action("MusteriIndex","Araclar")">Araçlar</a>
+            <a href="@Url.Action("MusteriIndex","Kiralamalars")">Kiralık Araçlar</a>
+            <a href="@Url.Action("MusteriHakkımızda","Hakkımızda")">Hakkımızda</a>
+            <a href="@Url.Action("Musteriiletisim","iletisim")">İletişim</a>
+        </div>
+
+        <div class="credit">
+            created by <span style="color: #d1242c">Ogün Çavuş</span> | CVS Rent A Car
+        </div>
+    </section>
+
+</body>
+</html>

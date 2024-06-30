@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.33529.622
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AracKiralamaDB", "AracKiralamaDB\AracKiralamaDB.csproj", "{F6C42C93-71EC-44C6-9D08-3738B39AFE4E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F6C42C93-71EC-44C6-9D08-3738B39AFE4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6C42C93-71EC-44C6-9D08-3738B39AFE4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6C42C93-71EC-44C6-9D08-3738B39AFE4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6C42C93-71EC-44C6-9D08-3738B39AFE4E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {370139D8-EF63-4C39-A4C8-46D3B6420680}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,133 @@
+﻿body {
+}
+.baslik_ortala {
+    width: 90%;
+    margin: auto;
+    border-bottom: 2px solid white;
+    font-size: 20px;
+}
+.alan4 {
+    width: 100%;
+    height: 100vh;
+}
+
+.alan4baslik {
+    width: 100%;
+    height: 20vh;
+    color: white;
+}
+
+.alan4sol {
+    width: 43%;
+    height: 78vh;
+    float: left;
+    margin-left: 5%;
+    background-color: sandybrown;
+    margin-top:-50px;
+}
+
+.alan4sag {
+    width: 43%;
+    height: 78vh;
+    float: left;
+    margin-left: 4%;
+    background-color: white;
+    margin-top: -50px;
+}
+
+.alan4sagadres {
+    width: 100%;
+    height: 33%;
+    background-color: white;
+}
+
+.adresfoto img {
+    width: 15%;
+    margin-top: 4%;
+    float: left;
+    margin-left: 5%;
+}
+
+.alan4sagtelefon {
+    width: 100%;
+    height: 33%;
+}
+
+.telefonfoto img {
+    width: 15%;
+    margin-top: 4%;
+    float: left;
+    margin-left: 5%;
+}
+
+.alan4sagmail {
+    width: 100%;
+    height: 33%;
+    background-color: white;
+}
+
+.mailfoto img {
+    margin-top: 4%;
+    width: 15%;
+    float: left;
+    margin-left: 5%;
+}
+
+.mailyazi {
+    float: left;
+    width: 75%;
+    height: 10vh;
+    margin-left: 2%;
+    margin-top: 7%;
+}
+
+.adresyazi {
+    float: left;
+    width: 75%;
+    height: 10vh;
+    margin-left: 2%;
+    margin-top: 7%;
+}
+
+.telefonyazi {
+    float: left;
+    width: 75%;
+    height: 10vh;
+    margin-left: 2%;
+    margin-top: 7%;
+}
+
+
+.map {
+    flex: 1 1 45rem;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.adresyazi p {
+    font-size: 20px;
+}
+
+.mailyazi p {
+    font-size: 20px;
+}
+
+.telefonyazi p {
+    font-size: 20px;
+}
+ 
+
+.bilgi{
+    width:100%;
+    height:20vh;
+}
+.bilgi p{
+    font-size:15px;
+    text-align:center;
+    color:white;
+}
+    .bilgi h1 {
+        text-align: center;
+        color: white;
+    }

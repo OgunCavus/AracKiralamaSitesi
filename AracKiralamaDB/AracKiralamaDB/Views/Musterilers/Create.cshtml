@@ -1,0 +1,175 @@
+﻿@model AracKiralamaDB.Models.Musteriler
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/genel_layout.cshtml";
+
+
+    <link href="~/Content/css/kayitol.css" rel="stylesheet" />
+}
+
+
+
+<div class="alan">
+
+    <div class="form_alan">
+        <div class="form">
+
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="form-horizontal">
+                    <hr />
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <div class="satir">
+                        @Html.LabelFor(model => model.KullaniciAdi, "Kullanıcı Adı:", htmlAttributes: new { @class = "yazi_boyut" })
+                        @Html.EditorFor(model => model.KullaniciAdi, new { htmlAttributes = new { @class = "textbox" } })
+                        @Html.ValidationMessageFor(model => model.KullaniciAdi, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="satir">
+                        @Html.LabelFor(model => model.Sifre, "Şifre:", htmlAttributes: new { @class = "yazi_boyut" })
+                        @Html.EditorFor(model => model.Sifre, new { htmlAttributes = new { @class = "textbox" } })
+                        @Html.ValidationMessageFor(model => model.Sifre, "", new { @class = "text-danger" })
+
+                    </div>
+
+                    <div class="satir">
+                        @Html.LabelFor(model => model.Kullanıcı_Tipi, "Kullanıcı Türü:", htmlAttributes: new { @class = "yazi_boyut" })
+
+                        @Html.EditorFor(model => model.Kullanıcı_Tipi, new { htmlAttributes = new { @class = "textbox", @Value = "Musteri" } })
+                        @Html.ValidationMessageFor(model => model.Kullanıcı_Tipi, "", new { @class = "text-danger" })
+
+                    </div>
+
+                    <div class="satir">
+                        @Html.LabelFor(model => model.Adi, "Adı:", htmlAttributes: new { @class = "yazi_boyut" })
+
+                        @Html.EditorFor(model => model.Adi,  new { htmlAttributes = new { @class = "textbox" } })
+                        @Html.ValidationMessageFor(model => model.Adi, "", new { @class = "text-danger" })
+
+                    </div>
+
+                    <div class="satir">
+                        @Html.LabelFor(model => model.Soyadi, "Soyadı:", htmlAttributes: new { @class = "yazi_boyut" })
+
+                        @Html.EditorFor(model => model.Soyadi, new { htmlAttributes = new { @class = "textbox" } })
+                        @Html.ValidationMessageFor(model => model.Soyadi, "", new { @class = "text-danger" })
+
+                    </div>
+
+                    <div class="satir">
+                        @Html.LabelFor(model => model.CinsiyetID, "Cinsiyet:", htmlAttributes: new { @class = "yazi_boyut" })
+
+                        @Html.DropDownList("CinsiyetID", null, htmlAttributes: new { @class = "textbox" })
+                        @Html.ValidationMessageFor(model => model.CinsiyetID, "", new { @class = "text-danger" })
+
+                    </div>
+
+                    <div class="satir">
+                        @Html.LabelFor(model => model.DogumTarihi, "Doğum Tarihi:", htmlAttributes: new { @class = "yazi_boyut" })
+
+                        @Html.EditorFor(model => model.DogumTarihi, new { htmlAttributes = new { @class = "textbox", @type = "date" } })
+                        @Html.ValidationMessageFor(model => model.DogumTarihi, "", new { @class = "text-danger" })
+
+                    </div>
+
+                    <div class="satir">
+                        @Html.LabelFor(model => model.Email, "Email:", htmlAttributes: new { @class = "yazi_boyut" })
+
+                        @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "textbox" } })
+                        @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+
+                    </div>
+
+                    <div class="satir">
+                        @Html.LabelFor(model => model.TelefonNo, "Telefon No:", htmlAttributes: new { @class = "yazi_boyut" })
+
+                        @Html.EditorFor(model => model.TelefonNo, new { htmlAttributes = new { @class = "textbox" } })
+                        @Html.ValidationMessageFor(model => model.TelefonNo, "", new { @class = "text-danger" })
+
+                    </div>
+
+                    <div class="satir">
+                        @Html.LabelFor(model => model.İl, "İl:", htmlAttributes: new { @class = "yazi_boyut" })
+
+                        @Html.EditorFor(model => model.İl, new { htmlAttributes = new { @class = "textbox" } })
+                        @Html.ValidationMessageFor(model => model.İl, "", new { @class = "text-danger" })
+
+                    </div>
+
+                    <div class="satir">
+                        @Html.LabelFor(model => model.İlce, "İlçe:", htmlAttributes: new { @class = "yazi_boyut" })
+
+                        @Html.EditorFor(model => model.İlce, new { htmlAttributes = new { @class = "textbox" } })
+                        @Html.ValidationMessageFor(model => model.İlce, "", new { @class = "text-danger" })
+
+                    </div>
+
+                    <div class="satir">
+                        @Html.LabelFor(model => model.Adres,"Adres:",htmlAttributes: new { @class = "yazi_boyut" })
+
+                        @Html.EditorFor(model => model.Adres, new { htmlAttributes = new { @class = "textbox" } })
+                        @Html.ValidationMessageFor(model => model.Adres, "", new { @class = "text-danger" })
+
+                    </div>
+
+                    <div class="satir">
+                        @Html.LabelFor(model => model.EhliyetNo, "Ehliyet No:", htmlAttributes: new { @class = "yazi_boyut" })
+
+                        @Html.EditorFor(model => model.EhliyetNo, new { htmlAttributes = new { @class = "textbox" } })
+                        @Html.ValidationMessageFor(model => model.EhliyetNo, "", new { @class = "text-danger" })
+
+                    </div>
+
+                    <div class="satir">
+                        @Html.LabelFor(model => model.EhliyetAlımTarihi,"Ehliyet Alım Tarihi:", htmlAttributes: new { @class = "yazi_boyut" })
+
+                        @Html.EditorFor(model => model.EhliyetAlımTarihi, new { htmlAttributes = new { @class = "textbox", @type = "date" } })
+                        @Html.ValidationMessageFor(model => model.EhliyetAlımTarihi, "", new { @class = "text-danger" })
+
+                    </div>
+
+                    <div class="satir">
+                        @Html.LabelFor(model => model.AcilDurumKisiAdi, "Acil Durum Kişi Adı:",htmlAttributes: new { @class = "yazi_boyut" })
+
+                        @Html.EditorFor(model => model.AcilDurumKisiAdi, new { htmlAttributes = new { @class = "textbox" } })
+                        @Html.ValidationMessageFor(model => model.AcilDurumKisiAdi, "", new { @class = "text-danger" })
+
+                    </div>
+
+                    <div class="satir">
+                        @Html.LabelFor(model => model.AcilDurumKisiNO, "Acil Durum Kişi No:",htmlAttributes: new { @class = "yazi_boyut" })
+
+                        @Html.EditorFor(model => model.AcilDurumKisiNO, new { htmlAttributes = new { @class = "textbox" } })
+                        @Html.ValidationMessageFor(model => model.AcilDurumKisiNO, "", new { @class = "text-danger" })
+
+                    </div>
+
+                    <div class="satir">
+                        @Html.LabelFor(model => model.AcilDurumYakınlıkDerecesi,"Acil Durum Yakınlık Derecesi:", htmlAttributes: new { @class = "yazi_boyut" })
+
+                        @Html.EditorFor(model => model.AcilDurumYakınlıkDerecesi, new { htmlAttributes = new { @class = "textbox" } })
+                        @Html.ValidationMessageFor(model => model.AcilDurumYakınlıkDerecesi, "", new { @class = "text-danger" })
+
+                    </div>
+
+                    <div class="satir_buton">
+                        <div class="col-md-offset-2 col-md-10">
+                            <input type="submit" value="Kayıt Ol" class="btn btn-default" />
+                        </div>
+                    </div>
+                </div>
+            }
+
+
+
+        </div>
+    </div>
+    <div class="foto_alan">
+
+    </div>
+
+</div>
+

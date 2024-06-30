@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="1eb53970afe24221b870724eeab9cbc4" Name="Diagram1">
+        <EntityTypeShape EntityType="AracKiralamaDBModel.Adminler" Width="1.5" PointX="0.5" PointY="0.5" />
+        <EntityTypeShape EntityType="AracKiralamaDBModel.ArabaMarkalari" Width="1.5" PointX="10.375" PointY="0.5" />
+        <EntityTypeShape EntityType="AracKiralamaDBModel.ArabaModelleri" Width="1.5" PointX="10.375" PointY="2.5" />
+        <EntityTypeShape EntityType="AracKiralamaDBModel.ArabaResimleri" Width="1.5" PointX="6.25" PointY="3" />
+        <EntityTypeShape EntityType="AracKiralamaDBModel.ArabaTurleri" Width="1.5" PointX="6.25" PointY="4.75" />
+        <EntityTypeShape EntityType="AracKiralamaDBModel.ArabaVitesTurleri" Width="1.5" PointX="10.375" PointY="4.625" />
+        <EntityTypeShape EntityType="AracKiralamaDBModel.Cinsiyetler" Width="1.5" PointX="2.5" PointY="0.5" />
+        <EntityTypeShape EntityType="AracKiralamaDBModel.Kullanicilar" Width="1.5" PointX="2.5" PointY="2.875" />
+        <EntityTypeShape EntityType="AracKiralamaDBModel.Musteriler" Width="1.5" PointX="4.375" PointY="0.5" />
+        <AssociationConnector Association="AracKiralamaDBModel.FK_Adminler_CinsiyetID" />
+        <AssociationConnector Association="AracKiralamaDBModel.FK_ArabaModelleri_ArabaMarkaID" />
+        <AssociationConnector Association="AracKiralamaDBModel.FK_Musteriler_CinsiyetID" />
+        <EntityTypeShape EntityType="AracKiralamaDBModel.Arabalar" Width="1.5" PointX="8.375" PointY="0.5" />
+        <AssociationConnector Association="AracKiralamaDBModel.FK_Arabalar_ArabaMarkaID" />
+        <AssociationConnector Association="AracKiralamaDBModel.FK_Arabalar_ArabaModelID" />
+        <AssociationConnector Association="AracKiralamaDBModel.FK_Arabalar_ArabaResimID" />
+        <AssociationConnector Association="AracKiralamaDBModel.FK_Arabalar_ArabaTurID" />
+        <AssociationConnector Association="AracKiralamaDBModel.FK_Arabalar_ArabaVitesTurID" />
+        <EntityTypeShape EntityType="AracKiralamaDBModel.Kiralamalar" Width="1.5" PointX="6.25" PointY="0.5" />
+        <AssociationConnector Association="AracKiralamaDBModel.FK_Kiralamalar_Arabalar" />
+        <AssociationConnector Association="AracKiralamaDBModel.FK_Kiralamalar_Musteriler" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

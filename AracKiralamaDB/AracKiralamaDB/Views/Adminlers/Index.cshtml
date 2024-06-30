@@ -1,0 +1,91 @@
+﻿@model IEnumerable<AracKiralamaDB.Models.Adminler>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Adminler</h2>
+
+<p>
+    
+    <a class="btn btn-primary" href="@Url.Action("Create","Adminlers")">Admin Ekle</a>
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.KullaniciAdi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sifre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Soyad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cinsiyetler.CinsiyetAdi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TelefonNo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.İl)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.İlce)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Adres)
+        </th>
+
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.KullaniciAdi)
+    </td>
+    <td>
+        @Html.ValidationMessageFor(modelItem => item.Sifre, "****", new { @class = "error" })
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Ad)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Soyad)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Cinsiyetler.CinsiyetAdi)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Email)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.TelefonNo)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.İl)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.İlce)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Adres)
+    </td>
+
+    <td>
+        <a class="btn btn-success" href="@Url.Action("Edit","Adminlers",new { id = item.AdminID })">Güncelle</a>
+        <a class="btn btn-warning" href="@Url.Action("Details","Adminlers",new { id = item.AdminID })">Detay Gör</a>
+        <a class="btn btn-danger" href="@Url.Action("Delete","Adminlers",new { id = item.AdminID })">Sil</a>
+    </td>
+</tr>
+}
+
+</table>

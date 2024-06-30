@@ -1,0 +1,38 @@
+﻿body {
+}
+.form-horizontal{
+    background-color:white;
+    width:50%;
+    height:40vh;
+    margin:auto;
+    border-radius:50px;
+
+}
+    .form-horizontal .form-group {
+        margin-left: 25px;
+        margin-top:15px;
+    }
+.col-md-10 {
+    margin-left: 50px;
+    padding:10px 10px;
+    margin-top:-23px;
+}
+
+.form-group .bt {
+    font-size: 1.3rem;
+    width: 150px;
+}
+.control-label {
+    font-weight:bold;
+}
+/*! responsive end  */
+.form-group a {
+    background-color: #d1242c;
+    border-radius: 50px;
+    text-align: center;
+    padding: 8px 10px;
+    color: white;
+}
+.form-control {
+    border:1px solid;
+}

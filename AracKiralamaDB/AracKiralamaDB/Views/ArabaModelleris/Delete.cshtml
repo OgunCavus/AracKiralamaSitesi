@@ -1,0 +1,39 @@
+﻿@model AracKiralamaDB.Models.ArabaModelleri
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Araba Modelleri Silme Sayfası</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ArabaModelAdi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ArabaModelAdi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ArabaMarkalari.ArabaMarkaAdi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ArabaMarkalari.ArabaMarkaAdi)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

@@ -1,0 +1,154 @@
+﻿@model AracKiralamaDB.Models.Musteriler
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Müşteri Detaylar Sayfası</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.KullaniciAdi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KullaniciAdi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sifre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sifre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Kullanıcı_Tipi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Kullanıcı_Tipi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Adi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Adi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Soyadi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Soyadi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DogumTarihi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DogumTarihi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TelefonNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TelefonNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.İl)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.İl)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.İlce)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.İlce)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Adres)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Adres)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EhliyetNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EhliyetNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EhliyetAlımTarihi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EhliyetAlımTarihi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AcilDurumKisiAdi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AcilDurumKisiAdi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AcilDurumKisiNO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AcilDurumKisiNO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AcilDurumYakınlıkDerecesi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AcilDurumYakınlıkDerecesi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cinsiyetler.CinsiyetAdi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cinsiyetler.CinsiyetAdi)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MusteriID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

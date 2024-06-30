@@ -1,0 +1,90 @@
+﻿body {
+    background-image: url('../img/lo.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.alan {
+    width: 60vh;
+    height: 60vh;
+    background-color: #d1242c;
+    margin-top: 10vh;
+    margin-left: 10vh;
+    color: white;
+    border-radius: 10%;
+}
+.login_alan {
+    width: 50vh;
+    height: 60vh;
+    background-color: #d1242c;
+    margin-top: 10vh;
+    color: white;
+    border-radius: 10%;
+    margin-left: 10px;
+}
+.kullanici_alan{
+    height:5vh;
+    text-align:right;
+    font-size:19px;
+}
+.sifre_alan {
+    height: 5vh;
+    text-align: right;
+    font-size: 19px;
+}
+.hatirla {
+    height: 5vh;
+    text-align: center;
+    font-size: 17px;
+}
+.buttonlar {
+    display: inline-block;
+    border-radius: 10px;    
+    cursor: pointer;
+    margin: 10px;
+    margin-left:90px;
+    height: 5vh;
+}
+.butonlar {
+ 
+}
+.buttonlar span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+    .buttonlar span:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+    }
+
+.buttonlar:hover span {
+    padding-right: 20px;
+}
+
+    .buttonlar:hover span:after {
+        opacity: 1;
+        right: 0;
+    }
+.imgcontainer img{
+    width:20vh;
+    height:20vh;
+    margin-left:110px;    
+}
+.txt {
+    border-radius: 8px;
+
+}
+.txt_but {
+        border-radius: 10px;
+        width:75px;
+        height:32px;
+        margin-left:-5px;
+
+}

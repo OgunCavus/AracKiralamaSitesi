@@ -1,0 +1,89 @@
+﻿@model IEnumerable<AracKiralamaDB.Models.Arabalar>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Arabalar</h2>
+
+<p>
+    <a class="btn btn-primary" href="@Url.Action("Create","Arabalars")">Araba Ekle</a>
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ArabaMarkalari.ArabaMarkaAdi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ArabaModelleri.ArabaModelAdi)
+        </th>        
+        <th>
+            @Html.DisplayNameFor(model => model.ArabaTurleri.ArabaTurAdi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ArabaVitesTurleri.ArabaVitesTurAdi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Yıl)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.YakitTuru)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Plaka)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fiyat)
+        </th>  
+        <th>
+            @Html.DisplayNameFor(model => model.MotorGucu)
+        </th>
+       
+       
+
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.ArabaMarkalari.ArabaMarkaAdi)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.ArabaModelleri.ArabaModelAdi)
+    </td>   
+    <td>
+        @Html.DisplayFor(modelItem => item.ArabaTurleri.ArabaTurAdi)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.ArabaVitesTurleri.ArabaVitesTurAdi)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Yıl)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.YakitTuru)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Plaka)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Fiyat)
+    </td>
+  
+    <td>
+        @Html.DisplayFor(modelItem => item.MotorGucu)
+    </td>
+
+
+
+    <td>
+        <a class="btn btn-success" href="@Url.Action("Edit","Arabalars",new { id = item.ArabaID })">Güncelle</a>
+        <a class="btn btn-warning" href="@Url.Action("Details","Arabalars",new { id = item.ArabaID })">Detay Gör</a>
+        <a class="btn btn-danger" href="@Url.Action("Delete","Arabalars",new { id = item.ArabaID })">Sil</a>
+    </td>
+</tr>
+}
+
+</table>

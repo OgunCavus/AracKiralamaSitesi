@@ -1,0 +1,322 @@
+﻿body {
+}
+
+.alan1 {
+    position: absolute;
+    top: 0;
+    background-image: url('../img/bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.alan1yazi {
+    width: 90vh;
+    height: 18vh;
+    margin-top: 13%;
+    margin-left: 5%;
+}
+
+.alan1 .btn {
+    background-color: white;
+    margin-left: 5%;
+    margin-top: 6.7%;
+}
+
+    .alan1 .btn a {
+        color: black;
+        font-weight: bold;
+        opacity: 0.7;
+        font-size: 20px;
+    }
+
+        .alan1 .btn a:hover {
+            opacity: 1;
+        }
+
+.alan1yazi p {
+    color: white;
+    font-size: 20px;
+}
+
+.alan1yazi h1 {
+    color: white;
+    font-size: 60px;
+}
+
+.alan2 {
+    margin-top: 80vh;
+    width: 100%;
+    height: 112vh;
+}
+
+    .alan2 .alan2ilan1 {
+        float: left;
+    }
+
+
+.alan2baslik {
+    width: 100%;
+    height: 20vh;
+}
+
+    .alan2baslik h1 {
+        color: white;
+    }
+
+.baslik_ortala {
+    width: 90%;
+    margin: auto;
+    padding-top: 5%;
+    border-bottom: 2px solid white;
+}
+
+.alan2ortala {
+    padding-top: 2%;
+    width: 85%;
+    height: 100vh;
+    margin: auto;
+}
+
+.alan2ilan1 {
+    border-radius: 20px;
+    width: 30%;
+    height: 90vh;
+    float: left;
+    margin-left: 2.5%;
+    background-color: white;
+    text-align: center;
+}
+
+    .alan2ilan1 p {
+        font-size: 20px;
+    }
+
+ilan1resim {
+    width: 40px;
+    height: 25px;
+}
+
+
+.kalinlastir {
+    font-weight: bold;
+}
+
+.btn a {
+    color: white;
+}
+
+.alan2ilan2 {
+    border-radius: 20px;
+    width: 30%;
+    height: 90vh;
+    float: left;
+    margin-left: 2.5%;
+    background-color: white;
+    text-align: center;
+}
+
+    .alan2ilan2 p {
+        font-size: 20px;
+    }
+
+.alan2ilan3 {
+    border-radius: 20px;
+    width: 30%;
+    height: 90vh;
+    float: left;
+    margin-left: 2.5%;
+    background-color: white;
+    text-align: center;
+}
+
+    .alan2ilan3 p {
+        font-size: 20px;
+    }
+
+.alan3 {
+    width: 100%;
+    height: 100vh;
+}
+
+.alan3ortala {
+    width: 90%;
+    height: 80vh;
+    margin: auto;
+}
+
+.alan3sol {
+    width: 45%;
+    height: 80vh;
+    margin: auto;
+    background-color: pink;
+    margin-top: 20px;
+    float: left;
+}
+
+    .alan3sol img {
+        width: 100%;
+        height: 100%;
+        margin: auto;
+    }
+
+.alan3sag {
+    width: 45%;
+    height: 80vh;
+    margin: auto;
+    float: left;
+    margin-top: 10px;
+    margin-left: 50px;
+}
+
+    .alan3sag p {
+        font-size: 170%;
+        color: white;
+    }
+
+    .alan3sag h1 {
+        font-size: 170%;
+        color: white;
+        font-size: 40px;
+    }
+
+.alan3sagyazi .btn {
+    margin-top: 40px;
+}
+
+.alan3baslik h1 {
+    color: white;
+    font-size: 30px;
+}
+
+.alan4 {
+    width: 100%;
+    height: 100vh;
+}
+
+.alan4baslik {
+    width: 100%;
+    height: 20vh;
+}
+
+.alan4sol {
+    width: 47%;
+    height: 78vh;
+    float: left;
+    margin-left: 2%;
+    background-color: sandybrown;
+}
+
+.alan4sag {
+    width: 47%;
+    height: 78vh;
+    float: left;
+    margin-left: 2%;
+    background-color: white;
+}
+
+.alan4sagadres {
+    width: 100%;
+    height: 33%;
+    background-color: white;
+}
+
+.adresfoto img {
+    width: 15%;
+    margin-top: 4%;
+    float: left;
+    margin-left: 5%;
+}
+
+.alan4sagtelefon {
+    width: 100%;
+    height: 33%;
+}
+
+.telefonfoto img {
+    width: 15%;
+    margin-top: 4%;
+    float: left;
+    margin-left: 5%;
+}
+
+.alan4sagmail {
+    width: 100%;
+    height: 33%;
+    background-color: white;
+}
+
+.mailfoto img {
+    margin-top: 4%;
+    width: 15%;
+    float: left;
+    margin-left: 5%;
+}
+
+.mailyazi {
+    float: left;
+    width: 75%;
+    height: 10vh;
+    margin-left: 2%;
+    margin-top: 7%;
+}
+
+.adresyazi {
+    float: left;
+    width: 75%;
+    height: 10vh;
+    margin-left: 2%;
+    margin-top: 7%;
+}
+
+.telefonyazi {
+    float: left;
+    width: 75%;
+    height: 10vh;
+    margin-left: 2%;
+    margin-top: 7%;
+}
+
+
+.map {
+    flex: 1 1 45rem;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.adresyazi p {
+    font-size: 20px;
+}
+
+.mailyazi p {
+    font-size: 20px;
+}
+
+.telefonyazi p {
+    font-size: 20px;
+}
+
+.yuvarla {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.resim--yuvarla {
+    display: inline-block;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+    .resim--yuvarla img {
+        width: auto;
+        height: 100%;
+        margin-left: -50%;
+    }

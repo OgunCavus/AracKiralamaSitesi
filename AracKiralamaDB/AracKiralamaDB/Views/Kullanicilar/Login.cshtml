@@ -1,0 +1,47 @@
+﻿
+@{
+    Layout = null;
+    <link href="~/Content/css/login.css" rel="stylesheet" />
+}
+<div class="alan">
+    <div class="login_alan">
+        <form method="post">
+            <div class="imgcontainer">
+                <img src="~/Content/img/OGUN6.png" />
+            </div>
+
+            <div class="container">
+                <div class="kullanici_alan">
+                    <label for="uname"><b>Kullanıcı Adı:</b></label>
+                    <input class="txt" type="text" placeholder="Kullanıcı Adını Giriniz" name="KullaniciAdi" required>
+                </div>
+                <div class="sifre_alan">
+                    <label for="psw"><b>Sifre:</b></label>
+                    <input class="txt" type="password" placeholder="Sifrenizi Giriniz" name="Sifre" required>
+                </div>
+                <div class="hatirla">
+                    <label>
+                        <input type="checkbox" checked="checked" name="remember"> Remember me
+                    </label>
+                </div>
+                <div class="butonlar">
+                    <button class="buttonlar" style="vertical-align:middle">
+
+                        <span>Giriş Yap </span>
+                    </button>
+                    <button onclick="window.location.href='@Url.Action("AnaSayfa","AnaSayfa")'" class="txt_but" style="vertical-align:middle">
+                        <span>Geri Dön</span>
+                    </button>
+                </div>
+            </div>
+            <div class="container-login100-form-btn">
+                @if (ViewBag.hata != null)
+            {
+                <p class="text-danger">@ViewBag.hata</p>
+            }
+            </div>
+
+
+        </form>
+    </div>
+</div>

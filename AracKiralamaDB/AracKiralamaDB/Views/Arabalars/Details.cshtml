@@ -1,0 +1,178 @@
+﻿@model AracKiralamaDB.Models.Arabalar
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Araba Detayları Sayfası</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Plaka)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Plaka)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.YakitTuru)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.YakitTuru)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fiyat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fiyat)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Yıl)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Yıl)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KoltukSayisi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KoltukSayisi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BagajHacmi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BagajHacmi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MotorHacmi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MotorHacmi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MotorGucu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MotorGucu)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Klima)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Klima)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Navigasyon)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Navigasyon)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GeriGorusKamerasi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GeriGorusKamerasi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ParkSensoru)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ParkSensoru)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Bluetooth)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Bluetooth)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.USBPortu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.USBPortu)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sunroof)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sunroof)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ArabaMarkalari.ArabaMarkaAdi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ArabaMarkalari.ArabaMarkaAdi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ArabaModelleri.ArabaModelAdi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ArabaModelleri.ArabaModelAdi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ArabaResimleri.Resim)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ArabaResimleri.Resim)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ArabaTurleri.ArabaTurAdi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ArabaTurleri.ArabaTurAdi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ArabaVitesTurleri.ArabaVitesTurAdi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ArabaVitesTurleri.ArabaVitesTurAdi)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ArabaID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

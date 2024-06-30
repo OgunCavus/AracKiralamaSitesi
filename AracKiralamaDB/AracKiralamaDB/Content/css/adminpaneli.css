@@ -1,0 +1,12 @@
+﻿body {
+    background-image: url('../img/kg1.jpeg');
+    background-repeat: no-repeat;
+    background-position:inherit;
+    background-size: cover;
+}
+.table{
+    background-color:white;
+    border:2px solid;
+
+    
+}

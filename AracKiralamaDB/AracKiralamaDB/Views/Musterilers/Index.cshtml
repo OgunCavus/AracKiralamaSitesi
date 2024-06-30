@@ -1,0 +1,89 @@
+﻿@model IEnumerable<AracKiralamaDB.Models.Musteriler>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Müşteriler</h2>
+
+<p>
+
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.KullaniciAdi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sifre)
+        </th>        
+        <th>
+            @Html.DisplayNameFor(model => model.Adi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Soyadi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cinsiyetler.CinsiyetAdi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TelefonNo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.İl)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.İlce)
+        </th>
+        
+       
+       
+
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.KullaniciAdi)
+    </td>
+    <td>
+        @Html.ValidationMessageFor(modelItem => item.Sifre, "****", new { @class = "error" })
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Adi)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Soyadi)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Cinsiyetler.CinsiyetAdi)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Email)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.TelefonNo)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.İl)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.İlce)
+    </td>
+  
+      
+
+    <td>
+        <a class="btn btn-success" href="@Url.Action("Edit","Musterilers",new { id = item.MusteriID })">Güncelle</a>
+        <a class="btn btn-warning" href="@Url.Action("Details","Musterilers",new { id = item.MusteriID })">Detay Gör</a>
+        <a class="btn btn-danger" href="@Url.Action("Delete","Musterilers",new { id = item.MusteriID })">Sil</a>
+    </td>
+</tr>
+}
+
+</table>

@@ -1,0 +1,26 @@
+﻿@model AracKiralamaDB.Models.ArabaVitesTurleri
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Araba Vites Türleri Detaylar Sayfası</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ArabaVitesTurAdi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ArabaVitesTurAdi)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ArabaVitesTurID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

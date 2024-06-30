@@ -1,0 +1,67 @@
+﻿@model IEnumerable<AracKiralamaDB.Models.Kiralamalar>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Musteri_Layout.cshtml";
+    <link href="~/Content/css/araclar.css" rel="stylesheet" />
+}
+<h1>Kiralık Araçlar</h1>
+
+
+<table class="table">
+    <tr>
+        <th>
+            Görünüm
+        </th>
+        <th>
+            Marka
+        </th>
+        <th>
+            Model
+        </th>
+        <th>
+            Yıl
+        </th>
+        <th>
+            Yakıt Türü
+        </th>
+        <th>
+            Vites
+        </th>
+        <th>
+            Ücret
+        </th>
+        <th>
+            Kira Durumu
+        </th>
+        <th>
+            Kirala
+        </th>
+
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        if (item.KiraDurum == "bos")
+        {
+            <tr>
+                <td> <img src="@item.Arabalar.ArabaResimleri.Resim" alt="Alternate Text" /></td>
+                <td>@Html.DisplayFor(modelItem => item.Arabalar.ArabaMarkalari.ArabaMarkaAdi)</td>
+                <td>@Html.DisplayFor(modelItem => item.Arabalar.ArabaModelleri.ArabaModelAdi)</td>
+                <td>@Html.DisplayFor(modelItem => item.Arabalar.Yıl)</td>
+                <td>@Html.DisplayFor(modelItem => item.Arabalar.YakitTuru)</td>
+                <td>@Html.DisplayFor(modelItem => item.Arabalar.ArabaVitesTurleri.ArabaVitesTurAdi)</td>
+                <td>@Html.DisplayFor(modelItem => item.Arabalar.Fiyat)</td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.KiraDurum)
+                </td>
+
+                <td>
+                    @Html.ActionLink("Kirala", "MusteriEdit", new { id = item.KiraID, @class = "btn btn-warning" })
+
+                </td>
+            </tr>
+        }
+    }
+
+</table>
